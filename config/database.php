@@ -1,8 +1,6 @@
 <?php 
   class Database {
     
-    protected $jawsurl;
-    protected $dbparts;
     protected $host;
     protected $uername;
     protected $password;
@@ -13,10 +11,10 @@
         $dbparts = parse_url($jawsurl);
         
         // DB Params
-        $host = $dbparts['host'];
-        $username = $dbparts['user'];
-        $password = $dbparts['pass'];
-        $db_name = ltrim($dbparts['path'],'/');
+        $this->host = $dbparts['host'];
+        $this->username = $dbparts['user'];
+        $this->password = $dbparts['pass'];
+        $this->db_name = ltrim($dbparts['path'],'/');
     }
     
     public $conn;
