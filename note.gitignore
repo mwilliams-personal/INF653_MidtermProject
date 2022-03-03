@@ -1,0 +1,25 @@
+To-do:
+
+1. Initial set up of folder structure - DONE
+2. Database class created - DONE
+3. Quotes index and model created - DONE
+4. Quotes READ/GET written - DONE
+5. Quotes CREATE/POST written - DONE
+6. Quotes UPDATE/PUT written - DONE
+7. Quotes DELETE written - DONE
+8. Migrate index and model from QUOTES to author - DONE
+9. Migrate CRUD operations from QUOTES to author - DONE
+10. specifically for delete, if the author/category are being used by a quote, do not allow it to delete - DONE
+10. Repeat 8-10 for category, but copy from author - DONE
+11. Test locally and ensure all endpoints function - DONE
+12. Git deployment
+13. Heroku deployment - https://devcenter.heroku.com/articles/jawsdb#using-jawsdb-with-php
+14. Test ALL endpoints using online tool below
+15. Clear all test data
+16. Create new test data and load in to database
+17. If time permits, random addition challenge
+
+
+
+https://objective-mestorf-df1b9a.netlify.app/
+https://inf653-midterm-example.herokuapp.com/api/quotes/
