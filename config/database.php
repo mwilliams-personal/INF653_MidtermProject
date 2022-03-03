@@ -1,14 +1,24 @@
 <?php 
   class Database {
     
-    private $jawsurl = getenv('JAWSDB_URL');
-    private $dbparts = parse_url($jawsurl);
+    protected $jawsurl;
+    protected $dbparts;
+    protected $host;
+    protected $uername;
+    protected $password;
+    protected $db_name;
+
+    function __construct(){
+        $jawsurl = getenv('JAWSDB_URL');
+        $dbparts = parse_url($jawsurl);
+        
+        // DB Params
+        $host = $dbparts['host'];
+        $username = $dbparts['user'];
+        $password = $dbparts['pass'];
+        $db_name = ltrim($dbparts['path'],'/');
+    }
     
-    // DB Params
-    private $host = $dbparts['host'];
-    private $username = $dbparts['user'];
-    private $password = $dbparts['pass'];
-    private $db_name = ltrim($dbparts['path'],'/');
     public $conn;
 
     // DB Connect
