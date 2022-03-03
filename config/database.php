@@ -1,9 +1,9 @@
 <?php 
   class Database {
     // DB Params
-    private $host = "localhost";
-    private $db_name = "quotesdb";
-    private $username = "root";
+    private $host = "";
+    private $db_name = "";
+    private $username = "";
     private $password = "";
     public $conn;
 
