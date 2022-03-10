@@ -37,7 +37,7 @@
         //Check for the category id
         else if(!$quote->id_Exists($quote->categoryId, "category")){ 
             //set response code - 400 bad request
-            http_response_code(400);
+            //http_response_code(400);
             
             //tell the user
             echo json_encode(array("message" => "categoryId Not Found"));
