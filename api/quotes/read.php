@@ -38,8 +38,20 @@
     else{
         $authorId = "";
     }
+    
+    if(isset($_GET["random"])){
+        if(strtolower(htmlspecialchars($_GET["random"])) == "true"){
+            $random = true;
+        }
+        else{
+            $random = false;
+        }
+    }
+    else{
+        $random = false;
+    }
 
-    $stmt = $quotes->read($id, $categoryId, $authorId);
+    $stmt = $quotes->read($id, $categoryId, $authorId, $random);
     $num = $stmt->rowCount();
 
     //check if more than 0 record found
