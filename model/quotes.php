@@ -62,21 +62,16 @@ class quotes{
         }
         //select all query 
         else{
-            if($random){
-                $query = 'SELECT quotes.id, quote, author, category 
-                        FROM quotes 
-                        JOIN authors ON quotes.authorid = authors.id 
-                        JOIN category ON quotes.categoryid = category.id
-                        ORDER BY RAND()
-                        LIMIT 1';   
-            }
-            else{
-                $query = 'SELECT quotes.id, quote, author, category 
-                        FROM quotes 
-                        JOIN authors ON quotes.authorid = authors.id 
-                        JOIN category ON quotes.categoryid = category.id
-                        ORDER BY quotes.id asc';   
-            }                               
+            $query = 'SELECT quotes.id, quote, author, category 
+                    FROM quotes 
+                    JOIN authors ON quotes.authorid = authors.id 
+                    JOIN category ON quotes.categoryid = category.id
+                    ORDER BY quotes.id asc';             
+        }
+
+        if($random)
+        {
+            str_replace("ORDER BY quotes.id asc", "ORDER BY RAND() LIMIT 1", $query);
         }
 
         //prepare query statement
