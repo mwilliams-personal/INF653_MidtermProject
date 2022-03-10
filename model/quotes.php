@@ -71,7 +71,7 @@ class quotes{
 
         if($random)
         {
-            str_replace("ORDER BY quotes.id asc", "ORDER BY RAND() LIMIT 1", $query);
+            $query = str_replace("ORDER BY quotes.id asc", "ORDER BY RAND() LIMIT 1", $query);
         }
 
         //prepare query statement
