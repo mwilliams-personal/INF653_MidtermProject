@@ -28,7 +28,7 @@
             http_response_code(201);
             
             //tell the user
-            echo json_encode(array("id" => $category->id, "author" => $category->category));
+            echo json_encode(array("id" => $category->id, "category" => $category->category));
         }
         else{
             //set response code - 503 service unavailable
