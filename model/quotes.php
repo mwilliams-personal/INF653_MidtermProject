@@ -69,6 +69,7 @@ class quotes{
                     ORDER BY quotes.id asc';             
         }
 
+        //If random is sent, do a replace on the query to add ORDER by random and limit the return response to 1 quote
         if($random)
         {
             $query = str_replace("ORDER BY quotes.id asc", "ORDER BY RAND() LIMIT 1", $query);
