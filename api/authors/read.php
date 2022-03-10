@@ -49,7 +49,12 @@
         http_response_code(200);
 
         //show quotes date in json format
-        echo json_encode($author_arr);
+        if(sizeof($author_arr) > 1){
+            echo json_encode($author_arr);
+        }
+        else{
+            echo json_encode($author_arr[0]);
+        }
     }
     else{
         //set response code - 404 not found
